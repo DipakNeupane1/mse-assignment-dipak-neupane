@@ -9,5 +9,6 @@ class WordSeparator:
         return len(split_into_words)
     
 word_seperator = WordSeparator();
-number_of_words = word_seperator.seperate_word_from_sentence("Hello, this is calls of psd week-2 assignment")
+input_from_user = input("Please enter a sentence of your choice: ")
+number_of_words = word_seperator.seperate_word_from_sentence(input_from_user)
 print(f"Numbers of words in given sentence is :: {number_of_words}")
