@@ -1,13 +1,15 @@
 import random
 import string
 
-def generate_random_word():
+
+class GuessTheWordGame:
+ def generate_random_word(self):
     random_word = ''.join(random.choices(string.ascii_lowercase, k=8))
     return random_word
 
-def guess_the_word():
+ def guess_the_word(self):
     number_of_lives = 10;
-    random_word = set(generate_random_word())
+    random_word = set(self.generate_random_word())
     print(f"Random word is :: ", random_word)
 
     # Generate exact blanks in array as the letters in the random_word
@@ -32,10 +34,11 @@ def guess_the_word():
        number_of_lives-=1
        print(f" Your remaining number of life is :: {number_of_lives}")
        if(number_of_lives<=0): 
-           print(f" Your have crossed the lives, so game is over now!!!")
+           print(f" Your have crossed the lives limit, so game is over now!!!")
            return
-    else: print(f" Your have crossed the lives, so game is over now!!!")
+    else: print(f" Your have crossed the lives limit, so game is over now!!!")
     return
             
-if __name__ == "__main__":
-    guess_the_word()
+# Create an instance of a class "GuessTheWordGame" and call the method/function inside it.
+guess_the_word_game_obj= GuessTheWordGame()
+guess_the_word_game_obj.guess_the_word()
