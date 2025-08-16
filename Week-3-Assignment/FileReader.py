@@ -7,6 +7,7 @@ class FileReader:
     def word_counter(self, file_path):
         with open(file_path,"r") as file:
          number_of_words = file.read().split(" ")
+         file.close()
          return len(number_of_words)
 
 

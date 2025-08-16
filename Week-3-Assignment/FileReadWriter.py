@@ -7,11 +7,13 @@ class FileReaderWriter:
     def file_reader(self,file_path):
      with open(file_path, "r") as file:
       content = file.read()
+      file.close()
       print(f"contents of the file is {content} ")
   
     def write_into_file(self, additional_file_content, file_path):
         with open(file_path,"a") as file:
          file.write(additional_file_content)
+         file.close()
 
 
 if __name__ == "__main__":
