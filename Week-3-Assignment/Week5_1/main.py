@@ -36,7 +36,7 @@ def main():
         elif choice == '4':
             user_id = int(input("Enter user ID to delete: "))
             delete_user(user_id)
-        if choice == '5':
+        elif choice == '5':
             name = input("Enter name: ")
             address = input("Enter address: ")
             add_student(name, address)
