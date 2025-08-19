@@ -18,7 +18,7 @@ def create_table():
         CREATE TABLE IF NOT EXISTS students (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
-            address TEXT NOT NULL UNIQUE
+            address TEXT NOT NULL
         )
     ''')
     conn.commit()
