@@ -34,7 +34,16 @@ defining the scope of the project in the same way as the activity completed in W
 6. Actor is librarian --> can view the list of students who has borrowed the books.
 7. Actor is student --> can list the books what he/she have taken.
 
-#Note: But for now, this application only have certain Features for librarian only but it could extent a bit more for student as well.
+#Note: But for now, this application only have certain Features(with one actor librarian) for librarian only but it could extent a bit more for student as well so actor could be two for now.
+This application just contains very basic feature at starting but it could contains many more as per bussiness requirement. for eg. 
+If end user or bussiness wants a feature like please add a new books with different gerne into library then the main actor
+would be the higher manager(whomever placing the request/proposal) and librarian would be child actor who will work on that basis.
+Basically, a fine library management system can contains features like,
+1. adding books, viewing books, deleting books, issuing books to sutdents, modify or edit the details of the books, 
+can view stocks of the books, order books, replace or re-order books, prepare books condition reports to higher manager, 
+list of books taken books available count, get student feedbacks, align with higher manager request to buy new books.
+if that would be the feature then we can multiple actors like, librarian, student, higher management, finance, vendors/supplier etc.
+
 
 
 ## How to Run
