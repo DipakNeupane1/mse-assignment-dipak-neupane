@@ -9,3 +9,6 @@ class GeneralStaff(Person):
      
  def showDetails(self):
    print(f"Staff Name: {self.name}, Address: {self.address}, Age: {self.age}, ID: {self.id}, Pay Rate: {self.pay_rate}")
+   
+ def greet(self):
+    print("Greetings and felicitations from the maestro "+ self.name)

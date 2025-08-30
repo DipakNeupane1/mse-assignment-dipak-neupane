@@ -13,3 +13,6 @@ class Academic(Person):
     
   def showDetails(self):
    print(f"Academics: {self.name}, Address: {self.address}, Age: {self.age}, ID: {self.id}, Tax Code: {self.tax_code}, Salary: {self.salary}")
+   
+  def greet(self):
+    print("Greetings and felicitations from the maestro "+ self.name)

@@ -11,12 +11,16 @@ class Main():
        #This is an example of inheritance, which reduces the code duplication and makes our code much robust and clean.
         person = Person("Charlie","21 whitaker place",20,"ID")
         person.showDetails()
-        student = Student("Charlie","21 whitaker place",20,"ID","pass")
+        person.greet()
+        student = Student("Charlie1","21 whitaker place",20,"ID","pass")
         student.showDetails()
-        academics = Academic("Charlie","21 whitaker place",20,"ID","tax_code",1000)
+        student.greet()
+        academics = Academic("Charlie2","21 whitaker place",20,"ID","tax_code",1000)
         academics.showDetails()
-        general_staff = GeneralStaff("Charlie","21 whitaker place",20,"ID",23.51)
+        academics.greet()
+        general_staff = GeneralStaff("Charlie3","21 whitaker place",20,"ID",23.51)
         general_staff.showDetails()
+        general_staff.greet()
     
 if __name__ == "__main__":
  main_app = Main()

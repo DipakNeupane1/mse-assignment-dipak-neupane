@@ -8,3 +8,6 @@ class Student(Person):
     
  def showDetails(self):
    print(f"Student Name: {self.name}, Address: {self.address}, Age: {self.age}, ID: {self.id}, Academic Record: {self.academic_record}")
+
+ def greet(self):
+    print("Greetings and felicitations from the maestro "+ self.name)
