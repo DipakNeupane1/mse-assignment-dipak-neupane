@@ -17,9 +17,19 @@ class Student:
     return self.__score
 
    def set_Score(self, score):
+       #Add a new method "updated info" in student class to increase mark to A+. Share the GitHub link here.
        if isinstance(score, (float, int)) and score > 0:
           self.__score = score
        else : print("Your score is too low to set.")
+       
+      
+   
+   #Add a new method "updated info" in student class to increase mark to A+. Share the GitHub link here. 
+   def updated_info(self, grade):
+    if grade is not None and isinstance(grade, str) and grade != "":
+          self.__grade = grade
+    else : print("Your grade is empty.")
+       
        
 class ScienceStudent(Student):
     def show_age(self):
@@ -36,8 +46,10 @@ print(s._age) # discouraged​
 
 print(s.get_grade()) # correct way​
 s.set_Score(0)
-
 print(s.get_getScore()) # getting score
+
+s.updated_info("A+")
+print(f"updated grade is :: {s.get_grade()}") # Getting updated grade
 print("===================>>>>>")
 c = ScienceStudent("Charlie1", 30) # changing the value of protected variable age.
 c.show_age()
