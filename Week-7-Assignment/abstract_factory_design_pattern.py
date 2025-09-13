@@ -1,5 +1,10 @@
 from abc import ABC, abstractmethod
 
+#Week 7 - Activity 3 (part 3): Factory design pattern - Update code
+#Update code in Week7 - activity 3 (part2) with adding one more shape, "Triangle" to your code. 
+#Then explain the difference between using the Factory Design Pattern and not using it,
+#to demonstrate the value of the pattern. Include notes on which lines you added to your code and why. Share your GitHub link.
+ 
 # 1) Abstract Product
 class Shape(ABC):
     @abstractmethod
@@ -17,13 +22,18 @@ class Circle(Shape):
 class Square(Shape):
     def draw(self) -> str:
         return "Drawing a Square"
-
-
+    
+class Triangle(Shape):
+    def draw(self):
+        return "Drawing a Triangle"
+    
+    
 # 3) Factory
 class ShapeFactory:
     _registry = {
         "circle": Circle,
         "square": Square,
+        "triangle": Triangle
     }
 
     @classmethod
@@ -52,6 +62,8 @@ if __name__ == "__main__":
     square = factory.create("square")
     print(square.draw())  
     
+    triangle = factory.create("Triangle")
+    print(triangle.draw())
     
     # My understanding into this code --->
    # Here, ABC is nothing but a abstract base class that is like interface/ in java, here the role of Shape(ABC) 
