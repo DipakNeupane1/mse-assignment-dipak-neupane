@@ -1,9 +1,4 @@
-#Week 10 - Activity 1: Use Pylint
-#Develop an Object-Oriented (OO) Python project that reads either a string or a list, then performs two analyses:
-#Calculates the total length.
-#Determines the number of uppercase characters.
-#The project should be structured with appropriate classes and methods. After implementation, use Pylint to analyze and improve the code quality, ensuring adherence to Python’s best practices and style guidelines. Share the result when you have done.
-
+"""The purpose of this Main class is to run some calculations on users input string."""
 class Main:
     """This class have two methods one for calculating total number of length 
     in given string and another for finding numbers of uppercase chrs in given string """
