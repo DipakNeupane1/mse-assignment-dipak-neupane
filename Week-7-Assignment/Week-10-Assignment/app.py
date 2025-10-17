@@ -6,10 +6,13 @@ app = Flask(__name__)
 def hello_flask():
     return "<p>Hello, Flask!</p>"
 
+@app.route('/username/<string:name>')
+def hello_user(name):
+    return f"<p>{name} is learning flask!</p>"
 
-#Can you use the following code and analyze it? 
- 
+#Can you use the following code and analyze it?
 #Sample code:
+
 @app.route('/cal/<int:num>')
 def show_square(num):
     return f"The square of {num} is {num**2}"
