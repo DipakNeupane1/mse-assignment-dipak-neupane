@@ -11,7 +11,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 event_count = soup.find('span', class_='badge bg-primary').text
 print(f"The number of upcoming events are : {event_count}")
 
-# ---- Retrieve event counts per category with each links ----
+# Retrieve event counts as per category with each links
 categories = {
     "Māori": "/events/tag/m%C4%81ori",
     "Pacific": "/events/tag/pacific",
