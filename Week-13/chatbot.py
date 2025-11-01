@@ -1,18 +1,29 @@
 from google import genai
 from google.genai import types
 
-
-API_KEY = "AIzaSyBLwA681HtHN11OEtgTYYgtBqovqdafGto"
+API_KEY = "AIzaSyABRDSCRZH8kDtntGNL7N71g4rOxUWl91I"
 
 def generate_itinerary(city, days, age, interests, budget):
-    # Pass API key when creating the gen AI client
+    """Generate a structured travel itinerary using optimized prompt."""
     client = genai.Client(api_key=API_KEY)
 
+    # Optimized prompt for Activity 2
     prompt = f"""
-    You are a professional travel planner.
-    Create a detailed {days}-day travel itinerary for {city}.
-    Traveler is {age} years old with interests in {interests} and a {budget} budget.
-    Include 3 activities per day with names, addresses, and short descriptions.
+    You are a professional travel planner with global experience.
+    Generate a {days}-day travel itinerary for {city}.
+    Traveler details:
+      - Age: {age}
+      - Interests: {interests}
+      - Budget: {budget}
+
+    Output format:
+    Day 1:
+    - Activity 1: [Name, Address, Short description]
+    - Activity 2: [Name, Address, Short description]
+    - Activity 3: [Name, Address, Short description]
+
+    Repeat for each day.
+    Conclude with a recommendation for local cuisine or cultural experience.
     """
 
     response = client.models.generate_content(
@@ -28,7 +39,7 @@ def generate_itinerary(city, days, age, interests, budget):
 
 
 def main():
-    print("\nWelcome to AI Travel Itinerary Generator \n")
+    print("\nWelcome to AI Travel Itinerary Generator\n")
     city = input("Enter destination city: ")
     days = input("Number of days: ")
     age = input("Your age: ")
@@ -37,7 +48,7 @@ def main():
 
     itinerary = generate_itinerary(city, days, age, interests, budget)
 
-    print("\nYour Personalized Itinerary:\n")
+    print("\nHey!, Your Personalized Itinerary:\n")
     print(itinerary)
 
 
